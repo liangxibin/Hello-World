@@ -1,0 +1,31 @@
+/**index.wxss**/
+.top {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 300px
+}
+text{
+  padding-top:30px
+}
+.hide{
+  display:none
+}
+/** 修改button默认的点击态样式类**/
+.button-hover{
+ background-color:red;
+}
+/** 添加自定义button点击态样式类**/
+.other-button-hover{
+ background-color:blur;
+}
+.service_selection .is_checked{
+ border: 1px solid #FE0002 ;
+ color: #FE0002 ;
+ background: #fff;
+}
+.service_selection .normal{
+ border: none;
+ color: #333;
+ background: #F0F1EC;
+}

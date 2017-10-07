@@ -1,0 +1,21 @@
+<!--index.wxml-->
+
+<swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}'>
+  <block wx:for='{{imgUrls}}'>
+    <swiper-item >
+      <image src='{{item}}' class='slide-image' class='top'/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='clickMes'>
+  <text class='middle'>品牌</text>
+  <view wx:for="{{multiArray}}" wx:for-index="j" bindtap='serviceSelection'>
+    <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="setDisabled" hover-class="button-hover" bindtouchstart='touchstart'> {{multiArray[j]}} </button>
+  </view>
+  <text>型号</text>
+  <view wx:for="{{objectMultiArray}}" wx:for-index="z">
+    <view wx:for="{{objectMultiArray[z]}}" wx:for-index="i" >
+     <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="setDisabled" hover-class="other-button-hove"> {{objectMultiArray[z][i]}} </button>
+    </view>
+  </view>
+</view>
